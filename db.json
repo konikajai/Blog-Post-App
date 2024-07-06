@@ -1,0 +1,20 @@
+{
+  "blogs": [
+    {
+      "id": "704c",
+      "title": "fm",
+      "description": "kh ;lr,;ry",
+      "category": "Fashion",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720294608/bjzcqi4cusfjkd7l91sd.jpg",
+      "date": "07/07/2024"
+    },
+    {
+      "id": "0cee",
+      "title": "travel",
+      "description": "ffwej wej wel",
+      "category": "Fashion",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720296790/kasgajuvljuvkllu4qjm.jpg",
+      "date": "07/07/2024"
+    }
+  ]
+}
