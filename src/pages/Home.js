@@ -17,11 +17,6 @@ const Home = () => {
     const [totalBlog, setTotalBlog] = useState(null);
     const [pageLimit] = useState(5);
 
-    useEffect(() => { 
-        loadBlogsData(0, 5, 0);
-        fetchLatestBlog();
-    }, [loadBlogsData])
-
     const loadBlogsData = async (start, end, increase, operation) => {
         const totalBlog = await axios.get("http://localhost:5000/blogs");
         setTotalBlog(totalBlog.data.length);
@@ -37,6 +32,12 @@ const Home = () => {
             toast.error("Something went wrong");
         }
     };
+    
+    useEffect(() => { 
+        loadBlogsData(0, 5, 0);
+        fetchLatestBlog();
+    }, [loadBlogsData])
+
 
     const fetchLatestBlog = async () => { 
         const totalBlog = await axios.get("http://localhost:5000/blogs");
