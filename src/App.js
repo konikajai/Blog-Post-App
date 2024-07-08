@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import AddEditBlog from './pages/AddEditBlog';
@@ -8,24 +8,28 @@ import Blog from './pages/Blog'
 import NotFound from './pages/NotFound';
 import { ToastContainer } from 'react-toastify';
 import Header from './components/Header';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 function App() {
   return (
-    <BrowserRouter>
-    <div className='App'>
-      <Header/>
-    <ToastContainer/>
-      <Routes>
-        <Route path="/"  element={<Home/>}/>
-        <Route path="/about"  element={<About/>}/>
-        <Route path="/addBlog"  element={<AddEditBlog/>}/>
-        <Route path="/editBlog/:id"  element={<AddEditBlog/>}/>
-        <Route path="/blog/:id"  element={<Blog/>}/>
-        <Route path="*" element={<NotFound/>}/>
-      </Routes>
-    </div>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <div className='App'>
+          <Header />
+          <ToastContainer />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/addBlog" element={<AddEditBlog />} />
+            <Route path="/editBlog/:id" element={<AddEditBlog />} />
+            <Route path="/blog/:id" element={<Blog />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+      <SpeedInsights />
+    </>
   );
 }
 
