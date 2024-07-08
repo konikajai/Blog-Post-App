@@ -20,7 +20,7 @@ const Home = () => {
     useEffect(() => { 
         loadBlogsData(0, 5, 0);
         fetchLatestBlog();
-    }, [])
+    }, [loadBlogsData])
 
     const loadBlogsData = async (start, end, increase, operation) => {
         const totalBlog = await axios.get("http://localhost:5000/blogs");
