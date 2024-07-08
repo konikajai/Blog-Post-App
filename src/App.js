@@ -8,7 +8,7 @@ import Blog from './pages/Blog'
 import NotFound from './pages/NotFound';
 import { ToastContainer } from 'react-toastify';
 import Header from './components/Header';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+// import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 function App() {
@@ -26,9 +26,10 @@ function App() {
             <Route path="/blog/:id" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          {/* <SpeedInsights /> */}
         </div>
       </BrowserRouter>
-      <SpeedInsights />
+      
     </>
   );
 }
