@@ -1,12 +1,14 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import AddEditBlog from './pages/AddEditBlog';
-import Blog from './pages/Blog';
+import Blog from './pages/Blog'
 import NotFound from './pages/NotFound';
 import { ToastContainer } from 'react-toastify';
 import Header from './components/Header';
+
 
 function App() {
   return (

@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import { MDBValidation, MDBInput, MDBBtn } from 'mdb-react-ui-kit';
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
-import { toast } from 'react-toastify'
-
-// eesrxnol
+import { toast } from 'react-toastify';
 
 const initialState = {
     title: "",
@@ -14,103 +11,176 @@ const initialState = {
     imageUrl: ""
 }
 
-const options = ['Travel', 'Fashion', 'Fitness', 'Sports', 'Food', 'Tech']
+const options = ['Travel', 'Fashion', 'Fitness', 'Sports', 'Food', 'Tech'];
 
 const AddEditBlog = () => {
     const [formValue, setFormValue] = useState(initialState);
     const [categoryErrMsg, setCategoryErrMsg] = useState(null);
+    const [editMode, setEditMode] = useState(false)
     const { title, description, category, imageUrl } = formValue;
 
     const navigate = useNavigate();
+    const { id } = useParams();
+
+    useEffect(() => {
+        if (id) {
+            setEditMode(true);
+            getSingleBlog(id);
+        } else {
+            setEditMode(false);
+            setFormValue({ ...initialState });
+        }
+    }, [id]);
+
+    const getSingleBlog = async (id) => {
+        try {
+            const response = await axios.get(`http://localhost:5000/blogs/${id}`);
+            setFormValue({ ...response.data });
+        } catch (error) {
+            toast.error("Something went wrong");
+        }
+    };
 
     const getDate = () => {
         let today = new Date();
         let dd = String(today.getDate()).padStart(2, "0");
         let mm = String(today.getMonth() + 1).padStart(2, "0");
         let yyyy = today.getFullYear();
-
-        today = mm + "/" + dd + "/" + yyyy;
-        return today;
+        return `${mm}/${dd}/${yyyy}`;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!category) {
             setCategoryErrMsg("Please select a category");
+            return;
         }
-        if (title && description && imageUrl && category) {
+
+        try {
             const currentDate = getDate();
-            const updatedBlogData = { ...formValue, date: currentDate };
-            const response = await axios.post("http://localhost:5000/blogs", updatedBlogData);
-            if (response.status === 201) {
-                toast.success("Blog Created Successfully");
+            if (!editMode) {
+                const updatedBlogData = { ...formValue, date: currentDate };
+                const response = await axios.post("http://localhost:5000/blogs", updatedBlogData);
+                if (response.status === 201) {
+                    toast.success("Blog Created Successfully");
+                } else {
+                    toast.error("Something went wrong");
+                }
+            } else {
+                const response = await axios.put(`http://localhost:5000/blogs/${id}`, formValue);
+                if (response.status === 200) {
+                    toast.success("Blog Updated Successfully");
+                } else {
+                    toast.error("Something went wrong");
+                }
             }
-            else {
-                toast.error("Something went wrong");
-            }
-            setFormValue({ title: "", description: "", category: "", imageUrl: "" })
+            setFormValue(initialState);
             navigate("/");
+        } catch (error) {
+            toast.error("Something went wrong");
         }
     };
 
     const onInputChange = (e) => {
-        let { name, value } = e.target;
+        const { name, value } = e.target;
         setFormValue({ ...formValue, [name]: value });
     };
 
-    const onUploadImage = (file) => {
-        console.log('file', file)
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("upload_preset", "zrhzxzza");
-        axios
-            .post("http://api.cloudinary.com/v1_1/dpzi20cpt/image/upload", formData)
-            .then((resp) => {
-                console.log("Response", resp)
-                toast.info('Image Uploaded Successfully');
-                setFormValue({ ...formValue, imageUrl: resp.data.url });
-            })
-            .catch((err) => {
-                toast.error('Something went wrong');
-            });
+    const onUploadImage = async (e) => {
+        try {
+            const file = e.target.files[0];
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", "zrhzxzza");
+            const response = await axios.post("http://api.cloudinary.com/v1_1/dpzi20cpt/image/upload", formData);
+            toast.info('Image Uploaded Successfully');
+            setFormValue({ ...formValue, imageUrl: response.data.url });
+        } catch (error) {
+            toast.error('Something went wrong');
+        }
     };
 
     const onCategoryChange = (e) => {
         setCategoryErrMsg(null);
-        setFormValue({ ...formValue, category: e.target.value })
+        setFormValue({ ...formValue, category: e.target.value });
     };
 
     return (
-        <MDBValidation className="row g-3" style={{ marginTop: '100px' }} noValidate onSubmit={handleSubmit}>
-            <p className="fs-2 fw-bold">Add Blog</p>
-            <div style={{ margin: 'auto', padding: '15px', maxWidth: '400px', alignContent: 'center' }}>
+        <div className="container-fluid">
+            <div className="row justify-content-center mt-5">
+                <div className="col-md-6">
+                    <form onSubmit={handleSubmit} className="mt-3">
+                        <p className="fs-2 fw-bold text-center mb-4">{editMode ? "Update Blog" : "Add Blog"}</p>
 
-                <MDBInput value={title || ""} name='title' type='text' onChange={onInputChange} required label='Title' validation="Please provide a title" invalid />
-                <br />
+                        <div className="mb-3">
+                            <label htmlFor="title" className="form-label">Title</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="title"
+                                name="title"
+                                value={title}
+                                onChange={onInputChange}
+                                required
+                            />
+                            {!title && <div className="invalid-feedback">Please provide a title.</div>}
+                        </div>
 
-                <MDBInput value={description || ""} name='description' type='text' onChange={onInputChange} required label='Description' validation="Please provide a description" textarea rows={4} invalid />
-                <br />
+                        <div className="mb-3">
+                            <label htmlFor="description" className="form-label">Description</label>
+                            <textarea
+                                className="form-control"
+                                id="description"
+                                name="description"
+                                value={description}
+                                onChange={onInputChange}
+                                rows={2}
+                                style={{ minHeight: '80px' }}
+                                required
+                            />
+                            {!description && <div className="invalid-feedback">Please provide a description.</div>}
+                        </div>
 
-                <MDBInput type='file' onChange={(e) => onUploadImage(e.target.files[0])} required validation="Please provide a title" invalid />
-                <br />
+                        {!editMode && (
+                            <div className="mb-3">
+                                <label htmlFor="image" className="form-label">Image Upload</label>
+                                <input
+                                    type="file"
+                                    className="form-control"
+                                    id="image"
+                                    onChange={onUploadImage}
+                                    required
+                                />
+                                {!imageUrl && <div className="invalid-feedback">Please provide an image.</div>}
+                            </div>
+                        )}
 
-                <select className="categoryDropdown" onChange={onCategoryChange} value={category}>
-                    <option>Please select category</option>
-                    {options.map((option, index) => (
-                        <option value={option || ""} key={index}>{option}</option>
-                    ))}
-                </select>
-                {categoryErrMsg && (
-                    <div className="categoryErrorMsg">{categoryErrMsg}</div>
-                )}
-                <br />
-                <br />
+                        <div className="mb-3">
+                            <label htmlFor="category" className="form-label">Category</label>
+                            <select
+                                className="form-select"
+                                id="category"
+                                value={category}
+                                onChange={onCategoryChange}
+                                required
+                            >
+                                <option value="">Please select a category</option>
+                                {options.map((option, index) => (
+                                    <option value={option} key={index}>{option}</option>
+                                ))}
+                            </select>
+                            {categoryErrMsg && <div className="categoryErrorMsg">{categoryErrMsg}</div>}
+                        </div>
 
-                <MDBBtn type="submit" style={{ marginRight: '10px' }}>Add</MDBBtn>
-                <MDBBtn color="danger" style={{ marginRight: '10px' }} onClick={() => navigate("/")}>Go Back</MDBBtn>
+                        <div className="mb-3 d-flex justify-content-center">
+                            <button type="submit" className="btn btn-primary me-2">{editMode ? "Update" : "Add"}</button>
+                            <button type="button" className="btn btn-danger" onClick={() => navigate("/")}>Go Back</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </MDBValidation>
+        </div>
     )
 };
 
-export default AddEditBlog
+export default AddEditBlog;

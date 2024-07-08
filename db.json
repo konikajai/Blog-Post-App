@@ -1,20 +1,92 @@
 {
   "blogs": [
     {
-      "id": "704c",
-      "title": "fm",
-      "description": "kh ;lr,;ry",
-      "category": "Fashion",
-      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720294608/bjzcqi4cusfjkd7l91sd.jpg",
-      "date": "07/07/2024"
+      "id": "96c4",
+      "title": "Tech Blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Tech",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382584/la0joxkxegqkxde2i5be.jpg",
+      "date": "07/08/2024"
     },
     {
-      "id": "0cee",
-      "title": "travel",
-      "description": "ffwej wej wel",
+      "id": "739d",
+      "title": "Tasty Food",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Food",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382617/l35016c2dq9xwajdeqam.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "fa1a",
+      "title": "Fashion Style",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
       "category": "Fashion",
-      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720296790/kasgajuvljuvkllu4qjm.jpg",
-      "date": "07/07/2024"
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382688/zdlljcrdzqvtimc7hupa.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "5791",
+      "title": "Fitness",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Fitness",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382710/ayfya3p2jiaev8ntm7ql.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "40bd",
+      "title": "Food Blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Food",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382744/fpyduordtnwpadhsqpvf.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "29cd",
+      "title": "Travel Blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Travel",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382763/hieyvpmwc4nmqao51zwk.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "e0be",
+      "title": "Fitness Blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Fitness",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382794/zy226ebx9cnra0c6ih23.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "5734",
+      "title": "Fashion Blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Fashion",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382823/j9mexedr7nfmonuafark.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "ddd3",
+      "title": "Sports Blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Sports",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720382861/spg6x31hdijhk0plrgei.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "0fcf",
+      "title": "Tech Blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a vulputate lacus. Quisque imperdiet metus tincidunt dui interdum lobortis. Vivamus sollicitudin est nisl, sit amet vestibulum massa ornare nec. Vestibulum eu sapien eu nisi consectetur cursus eget ut ligula. Sed in auctor mauris, eget cursus nibh. Maecenas vitae lorem id tellus venenatis dapibus. Maecenas ultrices pretium mattis. Integer bibendum, dolor eget fringilla placerat, ligula dolor tristique orci, in elementum risus lectus in arcu. Donec ut dui felis. Ut sit amet eros lacus. Donec in dictum risus, eu sollicitudin ipsum. Aliquam congue placerat leo, facilisis pellentesque magna lobortis vitae. Ut ut porttitor libero. Ut euismod mauris eget consequat ultricies. Nam ligula nunc, varius ac dui sed, elementum suscipit lacus. Morbi a turpis vel nisl mattis facilisis vel id ligula.",
+      "category": "Tech",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720383494/n4ktju18khiblyc68ris.jpg",
+      "date": "07/08/2024"
+    },
+    {
+      "id": "539c",
+      "title": "Travel blog",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Vestibulum sed arcu non odio euismod lacinia at quis risus. Elementum eu facilisis sed odio morbi quis commodo. Consequat semper viverra nam libero justo laoreet sit. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Feugiat in ante metus dictum at tempor. Fames ac turpis egestas integer eget aliquet nibh. Sed arcu non odio euismod lacinia. Enim diam vulputate ut pharetra.",
+      "category": "Travel",
+      "imageUrl": "http://res.cloudinary.com/dpzi20cpt/image/upload/v1720398453/mrqgeqcm7aqonxf30dni.jpg",
+      "date": "07/08/2024"
     }
   ]
 }
